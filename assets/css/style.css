@@ -1,0 +1,866 @@
+/* ===== VARIABLES CSS CORPORATIVAS ===== */
+:root {
+  /* Paleta de colores azul, celeste y blanco */
+  --color-primary: #0D6EFD;        /* Azul principal (Bootstrap) */
+  --color-primary-50: #F0F6FF;     /* Azul muy claro */
+  --color-primary-100: #D6E4FF;    /* Azul claro */
+  --color-primary-200: #ADC8FF;    /* Azul suave */
+  --color-primary-300: #85AFFF;    /* Azul medio claro */
+  --color-primary-400: #5C95FF;    /* Azul medio */
+  --color-primary-500: #337CFF;    /* Azul estándar */
+  --color-primary-600: #0D6EFD;    /* Azul principal */
+  --color-primary-700: #0A58CA;    /* Azul oscuro */
+  --color-primary-800: #084298;    /* Azul muy oscuro */
+  --color-primary-900: #052C65;    /* Azul profundo */
+  
+  --color-secondary: #0DCAF0;      /* Celeste principal (Bootstrap Info) */
+  --color-secondary-50: #E7FAFE;   /* Celeste muy claro */
+  --color-secondary-100: #C4F2FD;  /* Celeste claro */
+  --color-secondary-200: #A1E9FC;  /* Celeste suave */
+  --color-secondary-300: #7EE1FB;  /* Celeste medio claro */
+  --color-secondary-400: #5BD8FA;  /* Celeste medio */
+  --color-secondary-500: #38D0F9;  /* Celeste estándar */
+  --color-secondary-600: #0DCAF0;  /* Celeste principal */
+  --color-secondary-700: #0AB2D1;  /* Celeste oscuro */
+  --color-secondary-800: #0789A8;  /* Celeste muy oscuro */
+  --color-secondary-900: #05607F;  /* Celeste más profundo */
+  
+  --color-white: #ffffff;          /* Blanco puro */
+  --color-gray-50: #f8fafc;        /* Gris muy claro */
+  --color-gray-100: #f1f5f9;       /* Gris claro */
+  --color-gray-200: #e2e8f0;       /* Gris suave */
+  --color-gray-300: #cbd5e1;       /* Gris medio claro */
+  --color-gray-400: #94a3b8;       /* Gris medio */
+  --color-gray-500: #64748b;       /* Gris estándar */
+  --color-gray-600: #475569;       /* Gris oscuro */
+  --color-gray-700: #334155;       /* Gris muy oscuro */
+  --color-gray-800: #1e293b;       /* Gris profundo */
+  --color-gray-900: #0f172a;       /* Gris más profundo */
+  
+  --color-dark: var(--color-gray-900);
+  --color-light: var(--color-gray-50);
+  
+  /* Gradientes con azul, celeste y blanco */
+  --gradient-primary: linear-gradient(135deg, #0D6EFD 0%, #0DCAF0 100%);
+  --gradient-secondary: linear-gradient(135deg, #0DCAF0 0%, #38D0F9 100%);
+  --gradient-light: linear-gradient(135deg, #ffffff 0%, #F0F6FF 50%, #E7FAFE 100%);
+  --gradient-accent: linear-gradient(135deg, #0A58CA 0%, #0AB2D1 100%);
+  
+  /* Tipografía corporativa */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;         /* 12px */
+  --font-size-sm: 0.875rem;        /* 14px */
+  --font-size-base: 1rem;          /* 16px */
+  --font-size-lg: 1.125rem;        /* 18px */
+  --font-size-xl: 1.25rem;         /* 20px */
+  --font-size-2xl: 1.5rem;         /* 24px */
+  --font-size-3xl: 1.875rem;       /* 30px */
+  --font-size-4xl: 2.25rem;        /* 36px */
+  --font-size-5xl: 3rem;           /* 48px */
+  --font-size-6xl: 3.75rem;        /* 60px */
+  
+  /* Pesos de fuente */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Espaciados */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 6rem;     /* 96px */
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Bordes redondeados */
+  --border-radius-sm: 0.25rem;  /* 4px */
+  --border-radius-md: 0.5rem;   /* 8px */
+  --border-radius-lg: 0.75rem;  /* 12px */
+  --border-radius-xl: 1rem;     /* 16px */
+  --border-radius-full: 9999px;
+  
+  /* Transiciones */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  
+  /* Breakpoints para media queries */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* ===== RESET Y BASE CORPORATIVO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.6;
+  color: var(--color-gray-800);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografía corporativa mejorada */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-extrabold);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-gray-600);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* ===== SCROLLBAR PERSONALIZADA ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ===== UTILIDADES GENERALES ===== */
+.container {
+  width: 100%;
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 0 var(--spacing-md); /* Espaciado lateral reducido para móvil */
+}
+
+/* Aplicar max-width solo en pantallas más grandes */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  line-height: 1.2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ===== BOTONES ===== */
+.cta-button {
+  display: inline-block;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  text-align: center;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: var(--gradient-light);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+/* ===== SECCIÓN HERO ===== */
+/* Los estilos del hero están definidos en hero.css */
+
+/* Flecha animada de scroll down */
+.scroll-down {
+  position: absolute;
+  bottom: var(--spacing-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+  color: var(--color-white);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity var(--transition-normal);
+}
+
+.scroll-arrow:hover {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+  padding: var(--spacing-4xl) 0;
+}
+
+/* Ajuste del scroll-margin-top para el anclaje del header */
+@media (min-width: 768px) {
+  section {
+    scroll-margin-top: 180px; /* Escritorio */
+  }
+}
+
+@media (max-width: 767px) {
+  section {
+    scroll-margin-top: 104px; /* Móvil */
+  }
+}
+
+@media (max-width: 479px) {
+  section {
+    scroll-margin-top: 92px; /* Móvil pequeño */
+  }
+}
+
+section:not(.hero) {
+  padding-top: var(--spacing-2xl);
+}
+
+.about {
+  background: var(--color-light);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+.about-text {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2xl);
+  color: var(--color-gray);
+  line-height: 1.7;
+}
+
+/* ===== SECCIÓN SERVICIOS ===== */
+/* Estilos básicos movidos a services.css para evitar conflictos */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.service-item {
+  background: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(30, 64, 175, 0.1);
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-lg);
+  color: var(--color-primary);
+}
+
+.service-item h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-item p {
+  color: var(--color-gray);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+.services-cta {
+  text-align: center;
+}
+
+/* ===== SECCIÓN PYMES ===== */
+.pymes {
+  background: rgb(13, 30, 57);
+}
+
+.pymes-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pymes-text {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2xl);
+  color: var(--color-white);
+  line-height: 1.7;
+}
+
+.pymes .section-title {
+    color: var(--color-white);
+}
+
+/* ===== SECCIÓN POR QUÉ ELEGIRNOS ===== */
+.why-choose {
+  background: url('../img/fondo_mas_logistica.jpeg') center center/cover no-repeat fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Overlay sutil para mejorar legibilidad sin ocultar la imagen */
+.why-choose::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Contenido de la sección */
+.why-choose .container {
+  position: relative;
+  z-index: 2;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+.why-us-feature-item {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary-300);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-lg);
+  color: var(--color-secondary);
+}
+
+.feature-item h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.feature-item p {
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+/* Hover azul corporativo: asegurar contraste interno */
+.feature-item:hover h3,
+.feature-item:hover p {
+  color: var(--color-white);
+}
+
+.feature-item:hover .feature-icon {
+  color: var(--color-white);
+}
+
+/* Accesible y consistente en todas las vistas */
+.feature-item:focus-within,
+.feature-item:active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary-300);
+}
+
+.feature-item:focus-within h3,
+.feature-item:focus-within p,
+.feature-item:active h3,
+.feature-item:active p {
+  color: var(--color-white);
+}
+
+.feature-item:focus-within .feature-icon,
+.feature-item:active .feature-icon {
+  color: var(--color-white);
+}
+
+/* ===== SECCIÓN TESTIMONIOS ===== */
+.testimonials {
+  background: rgb(13, 30, 57);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.testimonial-item {
+  background: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  border: 1px solid var(--color-primary-100);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+  will-change: box-shadow, border-color;
+  animation: cardPulse 6s ease-in-out infinite;
+}
+
+/* Línea de acento superior corporativa */
+.testimonial-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
+}
+
+/* Hover/focus: elevación, acento y leve realce */
+.testimonial-item:hover,
+.testimonial-item:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-300);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.testimonial-item:hover::before,
+.testimonial-item:focus-within::before {
+  transform: scaleX(1);
+}
+
+.testimonial-item:active {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-item:hover .quote-icon,
+.testimonial-item:focus-within .quote-icon {
+  color: var(--color-white);
+}
+
+/* Texto en hover: asegurar contraste adecuado */
+.testimonial-item:hover .testimonial-quote,
+.testimonial-item:hover .testimonial-quote p,
+.testimonial-item:hover .testimonial-author,
+.testimonial-item:hover .author-info,
+.testimonial-item:hover .author-name,
+.testimonial-item:hover .author-position,
+.testimonial-item:hover .testimonial-company,
+.testimonial-item:focus-within .testimonial-quote,
+.testimonial-item:focus-within .testimonial-quote p,
+.testimonial-item:focus-within .testimonial-author,
+.testimonial-item:focus-within .author-info,
+.testimonial-item:focus-within .author-name,
+.testimonial-item:focus-within .author-position,
+.testimonial-item:focus-within .testimonial-company {
+  color: var(--color-white);
+}
+
+/* Accesibilidad: enfoque visible al navegar con teclado */
+.testimonial-item:focus-visible {
+  outline: 3px solid var(--color-secondary-400);
+  outline-offset: 4px;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.testimonial-item:focus-visible::before {
+  transform: scaleX(1);
+}
+
+/* Animación permanente profesional (pulso suave de elevación/borde) */
+@keyframes cardPulse {
+  0%, 100% {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary-100);
+  }
+  50% {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary-200);
+  }
+}
+
+.testimonial-quote {
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+}
+
+.testimonial-company {
+  color: var(--color-gray);
+  font-size: var(--font-size-sm);
+}
+
+.testimonials-closing {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  text-align: center;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--color-gray-900);
+  color: var(--color-white);
+  padding: var(--spacing-2xl) 0 var(--spacing-lg);
+  text-align: center;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* ===== BOTONES FLOTANTES ===== */
+.floating-buttons {
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  z-index: 1000;
+}
+
+.floating-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  border: none;
+  cursor: pointer;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: var(--color-white);
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-btn:hover {
+  background: #128c7e;
+  transform: scale(1.1);
+}
+
+.scroll-up-btn {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+}
+
+.scroll-up-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-up-btn:hover {
+  transform: scale(1.1);
+  background: var(--gradient-light);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ===== MEDIA QUERIES - DISEÑO RESPONSIVO ===== */
+
+/* Móvil - menos de 768px */
+@media (max-width: 767px) {
+  /* Ajustes globales de espaciado */
+  .container {
+    padding: 0 var(--spacing-md); /* Corregido: padding reducido para móvil */
+  }
+  section {
+    padding: var(--spacing-2xl) 0;
+    scroll-margin-top: 104px; /* Alineado con header móvil */
+  }
+  section:not(.hero) {
+    padding-top: var(--spacing-2xl);
+  }
+
+  /* Botones y CTAs */
+  .cta-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Gaps y paddings de bloques */
+  .features-grid {
+    gap: var(--spacing-lg);
+  }
+  .feature-item {
+    padding: var(--spacing-lg);
+  }
+  .services-grid {
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  .service-item {
+    padding: var(--spacing-lg);
+  }
+
+  /* Sección Por qué elegirnos: desactivar fondo fijo */
+  .why-choose {
+    background-attachment: scroll;
+    min-height: auto;
+  }
+
+  /* Botones flotantes */
+  .floating-buttons {
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    gap: var(--spacing-sm);
+  }
+  .floating-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Centrar sección Testimonios en móvil */
+  .testimonials-grid {
+    justify-items: center;
+  }
+  .testimonial-item {
+    text-align: center;
+  }
+  .testimonial-quote {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .testimonial-quote p,
+  .testimonial-author,
+  .author-info,
+  .testimonial-company {
+    text-align: center;
+  }
+  .quote-icon {
+    display: block;
+    margin: 0 auto var(--spacing-sm);
+  }
+}
+
+/* Móvil pequeño - menos de 480px */
+@media (max-width: 479px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  section {
+    padding: var(--spacing-xl) 0;
+    scroll-margin-top: 92px; /* Alineado con header móvil pequeño */
+  }
+  .floating-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Tablet - 768px y superior */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-5xl);
+  }
+  
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-content {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Desktop - 1024px y superior */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Desktop - 1280px y superior */
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 var(--spacing-2xl);
+  }
+}
