@@ -29,8 +29,9 @@
 
 /* Sección principal del footer */
 .footer-main {
-    display: grid;
-    grid-template-columns: 1fr; /* Mobile-first: una columna por defecto */
+    display: flex; /* Cambiado a flexbox */
+    justify-content: space-between; /* Distribuye el espacio */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
     gap: 2rem;
     margin-bottom: 2rem;
     align-items: start;
@@ -39,16 +40,19 @@
 /* Tablet y superior */
 @media (min-width: 768px) {
     .footer-main {
-        grid-template-columns: 1fr 1fr;
-        gap: 2.5rem;
+        flex-wrap: nowrap; /* Evita que los elementos se envuelvan en pantallas más grandes */
     }
-}
 
-/* Desktop */
-@media (min-width: 1024px) {
-    .footer-main {
-        grid-template-columns: 1.2fr 1fr 1fr 1.3fr;
-        gap: 3rem;
+    .footer-brand {
+        flex: 1.2;
+    }
+
+    .footer-column {
+        flex: 1;
+    }
+
+    .footer-contact {
+        flex: 1.3;
     }
 }
 
